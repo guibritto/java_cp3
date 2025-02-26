@@ -35,9 +35,11 @@ public class LivroService {
         return livro;
     }
 
+
     public LivroResponse livroToResponse(Livro livro){
-        return new LivroResponse(livro.getAutor() + " - " + livro.getTitulo());
+        return new LivroResponse(livro.getId(),livro.getAutor() + " - " + livro.getTitulo());
     }
+
 
     public List<LivroResponse> livrosToResponse(List<Livro> livros) {
         List<LivroResponse> listaLivros = new ArrayList<>();
